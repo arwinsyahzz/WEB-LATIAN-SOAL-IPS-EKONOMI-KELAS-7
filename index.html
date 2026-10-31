@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal IPS Ekonomi Kelas 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Latihan Soal IPS Ekonomi<br><small>Kelas 7 SMP</small></h1>
+
+        <!-- 1. Halaman Profil / Identitas Siswa -->
+        <div id="profile-screen">
+            <h3>Masukkan Identitas Anda</h3>
+            <form id="profile-form" onsubmit="startQuiz(event)">
+                <div class="form-group">
+                    <label for="student-name">Nama Lengkap:</label>
+                    <input type="text" id="student-name" required placeholder="Contoh: Arwinsyah Slaniro">
+                </div>
+                <div class="form-group">
+                    <label for="student-class">Kelas:</label>
+                    <input type="text" id="student-class" required placeholder="Contoh: 7G">
+                </div>
+                <div class="form-group">
+                    <label for="student-school">Asal Sekolah:</label>
+                    <input type="text" id="student-school" required placeholder="Contoh: SMPN 1 WARU SIDOARJO">
+                </div>
+                <button type="submit" class="btn-submit">Mulai Kuis</button>
+            </form>
+        </div>
+
+        <!-- 2. Area Kuis (Awalnya Disembunyikan) -->
+        <div id="quiz-screen" class="hide">
+            <div class="quiz-header">
+                <span id="question-number">Soal 1 dari 10</span>
+                <span id="score-tracker">Skor: 0</span>
+            </div>
+            <div class="question-box" id="question-text">Pertanyaan akan muncul di sini</div>
+            <ul class="options-list" id="options-container">
+                <!-- Pilihan A, B, C dimasukkan melalui JavaScript -->
+            </ul>
+            <div id="notification"></div>
+        </div>
+
+        <!-- 3. Area Hasil Akhir (Dilengkapi Info Profil) -->
+        <div id="result-screen" class="result-container hide">
+            <h2>Kuis Selesai!</h2>
+            <div class="student-info-card">
+                <p><strong>Nama:</strong> <span id="res-name">-</span></p>
+                <p><strong>Kelas:</strong> <span id="res-class">-</span></p>
+                <p><strong>Asal Sekolah:</strong> <span id="res-school">-</span></p>
+            </div>
+            <div class="score-badge" id="final-score">0</div>
+            <p id="result-message"></p>
+            <button class="btn-restart" onclick="location.reload()">Ulangi Dari Awal</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
